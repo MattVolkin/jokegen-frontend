@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dad Joke Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <button id="hamburger-menu" aria-label="Show favorites" class="hamburger">
+        &#9776;
+      </button>
+      <h1 class="site-title">Dad Joke Generator</h1>
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search jokes..." />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <!-- Favorites Sidebar -->
+  <aside id="favorites-sidebar">
+    <div class="sidebar-header">
+      <span>Favorites</span>
+      <button id="close-sidebar" aria-label="Close favorites">&times;</button>
+    </div>
+    <div id="favorites-sidebar-list"></div>
+  </aside>
+
+  <main>
+    <!-- Random Joke Section -->
+    <section id="joke-section">
+      <h2>Random Joke</h2>
+      <div id="joke-display" class="joke-box">Generated Joke Text</div>
+      <audio id="joke-audio" controls style="display: none;"></audio>
+      <button id="random-joke-btn">Get Random Joke</button>
+      <label><input type="checkbox" id="autoplay-audio"> Autoplay audio</label>
+    </section>
+
+
+
+    <!-- Search Section -->
+    <section id="search-section" style="display:none;">
+      <h2>Search</h2>
+      <div id="search-results"></div>
+      <button id="show-more-btn" style="display:none;">Show More Results</button>
+    </section>
+
+  </main>
+
+  <footer>
+    
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
