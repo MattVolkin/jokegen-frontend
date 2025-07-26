@@ -110,8 +110,14 @@ window.addEventListener('DOMContentLoaded', () => {
             mediaContainer.style.alignItems = 'center';
             mediaContainer.style.justifyContent = 'space-between';
 
+            // Ensure audio_file_path is a full URL if needed
+            let audioSrc = joke.audio_file_path;
+            if (audioSrc.startsWith('/')) {
+                audioSrc = API_BASE_URL + audioSrc;
+            }
+
             const audio = document.createElement('audio');
-            audio.src = joke.audio_file_path;
+            audio.src = audioSrc;
             audio.controls = true;
             audio.style.flex = '1';
 
@@ -158,8 +164,14 @@ window.addEventListener('DOMContentLoaded', () => {
                 mediaContainer.style.alignItems = 'center';
                 mediaContainer.style.justifyContent = 'space-between';
 
+                // Ensure audio_file_path is a full URL if needed
+                let audioSrc = joke.audio_file_path;
+                if (audioSrc.startsWith('/')) {
+                    audioSrc = API_BASE_URL + audioSrc;
+                }
+
                 const audio = document.createElement('audio');
-                audio.src = joke.audio_file_path;
+                audio.src = audioSrc;
                 audio.controls = true;
                 audio.style.flex = '1';
 
