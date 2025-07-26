@@ -1,6 +1,6 @@
 // app.js - JokeGen Website Skeleton
 
-const API_BASE_URL = 'http://127.0.0.1:5000';
+const API_BASE_URL = 'https://jokegen-backend.onrender.com';
 
 // Cookie utility functions and helpers
 function getFavoritesFromCookies() {
@@ -220,7 +220,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 displayJoke(data);
             }
         } catch (err) {
-            jokeDisplay.textContent = 'Failed to fetch joke. Is the backend running?';
+            jokeDisplay.textContent = 'Failed to fetch joke. Is the backend running or is the Render backend URL correct?';
             jokeAudio.style.display = 'none';
             console.error(err);
         }
@@ -252,7 +252,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 showMoreBtn.style.display = 'none';
             }
         } catch (err) {
-            searchResults.textContent = 'Failed to fetch search results.';
+            searchResults.textContent = 'Failed to fetch search results. Is the Render backend URL correct?';
             showMoreBtn.style.display = 'none';
             console.error(err);
         }
