@@ -68,7 +68,6 @@ header {
   flex: 1;
   text-align: center;
   text-shadow: none;
-  border-bottom: 3px solid var(--gold);
   padding-bottom: 0.2rem;
 }
 
@@ -195,19 +194,20 @@ input[type="checkbox"] {
   height: 1.2em;
 }
 
+/* Favorites Sidebar: match header color and style */
 #favorites-sidebar {
   position: fixed;
   top: 0;
   left: -340px;
-  width: 320px;
+  width: 340px;
   height: 100%;
-  background: var(--white);
+  background: var(--black);
   box-shadow: 2px 0 16px rgba(44,44,44,0.18);
   z-index: 1000;
   transition: left 0.3s;
   display: flex;
   flex-direction: column;
-  color: var(--black);
+  color: var(--gold);
   border-top-right-radius: 18px;
   border-bottom-right-radius: 18px;
   border-right: 2px solid var(--gold);
@@ -220,8 +220,8 @@ input[type="checkbox"] {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem;
-  background: var(--gold);
-  color: var(--black);
+  background: var(--black);
+  color: var(--gold);
   font-size: 1.2rem;
   border-top-right-radius: 18px;
 }
@@ -229,15 +229,15 @@ input[type="checkbox"] {
   background: none;
   border: none;
   font-size: 2rem;
-  color: var(--black);
+  color: var(--gold);
   cursor: pointer;
   transition: color 0.2s;
   padding: 0.2rem 0.7rem;
   border-radius: 8px;
 }
 #close-sidebar:hover {
-  background: var(--black);
-  color: var(--gold);
+  background: var(--gold);
+  color: var(--black);
 }
 #favorites-sidebar-list {
   flex: 1;
@@ -286,6 +286,20 @@ input[type="checkbox"] {
   #search-input, #search-form button {
     height: 44px;
     font-size: 1rem;
+  }
+  #favorites-sidebar {
+    width: 100vw;
+    left: -100vw;
+    font-size: 1rem;
+    border-radius: 0;
+    border-right: none;
+    border-bottom: 4px solid var(--gold);
+  }
+  #favorites-sidebar.open {
+    left: 0;
+  }
+  .sidebar-header {
+    border-radius: 0;
   }
 }
 @media (max-width: 600px) {
