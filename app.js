@@ -121,6 +121,13 @@ window.addEventListener('DOMContentLoaded', () => {
             audio.controls = true;
             audio.style.flex = '1';
 
+            // Autoplay logic
+            setTimeout(() => {
+                if (autoplayCheckbox.checked) {
+                    audio.play().catch(() => {});
+                }
+            }, 100);
+
             const heart = document.createElement('span');
             heart.textContent = '♥';
             heart.style.cursor = 'pointer';
