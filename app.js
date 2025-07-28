@@ -28,10 +28,24 @@ window.addEventListener('DOMContentLoaded', () => {
     const favoritesSidebar = document.getElementById('favorites-sidebar');
     const closeSidebar = document.getElementById('close-sidebar');
     const favoritesSidebarList = document.getElementById('favorites-sidebar-list');
+    const clearSearchBtn = document.getElementById('clear-search-btn');
 
     let searchResultsData = [];
     let visibleCount = 0;
     const RESULTS_PER_BATCH = 5;
+
+    // Clear search results and return to random joke view
+    function clearSearch() {
+        searchSection.style.display = 'none';
+        searchResults.innerHTML = '';
+        searchInput.value = '';
+        searchResultsData = [];
+        visibleCount = 0;
+        showMoreBtn.style.display = 'none';
+    }
+
+    // Add event listener for clear search button
+    clearSearchBtn.addEventListener('click', clearSearch);
 
     // Toggle favorite status and update sidebar
     function toggleFavorite(joke) {
