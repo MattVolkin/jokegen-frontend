@@ -294,105 +294,53 @@ input[type="checkbox"] {
 /* iPhone SE (375px) and small Android phones */
 @media (max-width: 375px) {
   .header-content {
-    padding: 0.5rem 0.3rem;
-    gap: 0.3rem;
-  }
-  
-  .site-title {
-    font-size: 1.1rem;
-    margin: 0.3rem 0;
-  }
-  
-  #search-form {
-    height: 36px;
-  }
-  
-  #search-input, #search-form button {
-    height: 36px;
-    font-size: 0.9rem;
-  }
-  
-  main {
-    margin: 0.3rem;
-    padding: 0.6rem;
-    border-radius: 10px;
-  }
-  
-  .joke-box {
-    padding: 0.8rem;
-    font-size: 0.9rem;
-  }
-  
-  button,
-  #random-joke-btn,
-  #show-more-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    border-radius: 18px;
-  }
-  
-  #favorites-sidebar {
-    width: 100vw;
-  }
-  
-  .sidebar-header {
-    padding: 0.8rem;
-    font-size: 1.2rem;
-  }
-  
-  #favorites-sidebar-list {
-    padding: 0.8rem;
-    font-size: 0.9rem;
-  }
-  
-  .hamburger {
-    font-size: 1.8rem;
-    padding: 0.2rem 0.5rem;
-  }
-}
-
-/* iPhone 12/13/14 (390px) and similar Android */
-@media (min-width: 376px) and (max-width: 414px) {
-  .header-content {
-    padding: 0.7rem 0.5rem;
-    gap: 0.4rem;
+    padding: 0.8rem 0.5rem;
+    gap: 0.5rem;
   }
   
   .site-title {
     font-size: 1.3rem;
-    margin: 0.4rem 0;
+    margin: 0.5rem 0;
   }
   
   #search-form {
-    height: 40px;
+    height: 44px;
+    min-width: 280px;
   }
   
   #search-input, #search-form button {
-    height: 40px;
+    height: 44px;
     font-size: 1rem;
   }
   
   main {
-    margin: 0.5rem;
-    padding: 0.8rem;
+    margin: 0.8rem;
+    padding: 1rem;
     border-radius: 12px;
   }
   
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
   .joke-box {
-    padding: 1rem;
+    padding: 1.2rem;
     font-size: 1rem;
+    margin: 1rem 0;
   }
   
   button,
   #random-joke-btn,
   #show-more-btn {
-    padding: 0.6rem 1.2rem;
+    padding: 0.8rem 1.5rem;
     font-size: 1rem;
     border-radius: 20px;
+    margin-top: 1rem;
   }
   
   #favorites-sidebar {
-    width: 98vw;
+    width: 100vw;
   }
   
   .sidebar-header {
@@ -409,46 +357,142 @@ input[type="checkbox"] {
     font-size: 2rem;
     padding: 0.3rem 0.6rem;
   }
+  
+  label {
+    font-size: 1rem;
+    margin-left: 0.8rem;
+  }
+  
+  input[type="checkbox"] {
+    width: 1.3em;
+    height: 1.3em;
+  }
 }
 
-/* iPhone 12/13/14 Pro Max, iPhone 15 Plus (428px) and large Android */
-@media (min-width: 415px) and (max-width: 428px) {
+/* iPhone 12/13/14 (390px) and similar Android */
+@media (min-width: 376px) and (max-width: 414px) {
   .header-content {
-    padding: 0.8rem 0.6rem;
-    gap: 0.5rem;
+    padding: 1rem 0.7rem;
+    gap: 0.6rem;
   }
   
   .site-title {
-    font-size: 1.4rem;
-    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    margin: 0.6rem 0;
   }
   
   #search-form {
-    height: 44px;
+    height: 48px;
+    min-width: 300px;
   }
   
   #search-input, #search-form button {
-    height: 44px;
-    font-size: 1.05rem;
+    height: 48px;
+    font-size: 1.1rem;
   }
   
   main {
-    margin: 0.6rem;
-    padding: 1rem;
+    margin: 1rem;
+    padding: 1.2rem;
     border-radius: 14px;
   }
   
+  h2 {
+    font-size: 1.3rem;
+    margin-top: 1.2rem;
+  }
+  
   .joke-box {
-    padding: 1.1rem;
-    font-size: 1.05rem;
+    padding: 1.3rem;
+    font-size: 1.1rem;
+    margin: 1.2rem 0;
   }
   
   button,
   #random-joke-btn,
   #show-more-btn {
-    padding: 0.7rem 1.4rem;
-    font-size: 1.05rem;
+    padding: 0.9rem 1.7rem;
+    font-size: 1.1rem;
     border-radius: 22px;
+    margin-top: 1.2rem;
+  }
+  
+  #favorites-sidebar {
+    width: 98vw;
+  }
+  
+  .sidebar-header {
+    padding: 1.2rem;
+    font-size: 1.6rem;
+  }
+  
+  #favorites-sidebar-list {
+    padding: 1.2rem;
+    font-size: 1.1rem;
+  }
+  
+  .hamburger {
+    font-size: 2.2rem;
+    padding: 0.4rem 0.7rem;
+  }
+  
+  label {
+    font-size: 1.1rem;
+    margin-left: 0.8rem;
+  }
+  
+  input[type="checkbox"] {
+    width: 1.4em;
+    height: 1.4em;
+  }
+}
+
+/* iPhone 12/13/14 Pro Max, iPhone 15 Plus (428px) and large Android */
+@media (min-width: 415px) and (max-width: 428px) {
+  .header-content {
+    padding: 1.2rem 0.8rem;
+    gap: 0.7rem;
+  }
+  
+  .site-title {
+    font-size: 1.6rem;
+    margin: 0.7rem 0;
+  }
+  
+  #search-form {
+    height: 52px;
+    min-width: 320px;
+  }
+  
+  #search-input, #search-form button {
+    height: 52px;
+    font-size: 1.15rem;
+  }
+  
+  main {
+    margin: 1.2rem;
+    padding: 1.4rem;
+    border-radius: 16px;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 1.4rem;
+  }
+  
+  .joke-box {
+    padding: 1.4rem;
+    font-size: 1.15rem;
+    margin: 1.4rem 0;
+  }
+  
+  button,
+  #random-joke-btn,
+  #show-more-btn {
+    padding: 1rem 1.9rem;
+    font-size: 1.15rem;
+    border-radius: 24px;
+    margin-top: 1.4rem;
   }
   
   #favorites-sidebar {
@@ -456,86 +500,36 @@ input[type="checkbox"] {
   }
   
   .sidebar-header {
-    padding: 1.1rem;
-    font-size: 1.5rem;
+    padding: 1.4rem;
+    font-size: 1.7rem;
   }
   
   #favorites-sidebar-list {
-    padding: 1.1rem;
-    font-size: 1.05rem;
-  }
-  
-  .hamburger {
-    font-size: 2.2rem;
-    padding: 0.3rem 0.7rem;
-  }
-}
-
-/* iPhone 15 Pro Max, Samsung Galaxy Ultra (430px+) */
-@media (min-width: 429px) and (max-width: 600px) {
-  .header-content {
-    padding: 1rem 0.8rem;
-    gap: 0.6rem;
-  }
-  
-  .site-title {
-    font-size: 1.6rem;
-    margin: 0.6rem 0;
-  }
-  
-  #search-form {
-    height: 48px;
-  }
-  
-  #search-input, #search-form button {
-    height: 48px;
-    font-size: 1.1rem;
-  }
-  
-  main {
-    margin: 0.8rem;
-    padding: 1.2rem;
-    border-radius: 16px;
-  }
-  
-  .joke-box {
-    padding: 1.2rem;
-    font-size: 1.1rem;
-  }
-  
-  button,
-  #random-joke-btn,
-  #show-more-btn {
-    padding: 0.8rem 1.6rem;
-    font-size: 1.1rem;
-    border-radius: 24px;
-  }
-  
-  #favorites-sidebar {
-    width: 92vw;
-  }
-  
-  .sidebar-header {
-    padding: 1.2rem;
-    font-size: 1.6rem;
-  }
-  
-  #favorites-sidebar-list {
-    padding: 1.2rem;
-    font-size: 1.1rem;
+    padding: 1.4rem;
+    font-size: 1.15rem;
   }
   
   .hamburger {
     font-size: 2.4rem;
     padding: 0.4rem 0.8rem;
   }
+  
+  label {
+    font-size: 1.15rem;
+    margin-left: 0.8rem;
+  }
+  
+  input[type="checkbox"] {
+    width: 1.4em;
+    height: 1.4em;
+  }
 }
 
-/* Large phones and small tablets (600px-900px) */
-@media (min-width: 600px) and (max-width: 900px) {
+/* iPhone 15 Pro Max, Samsung Galaxy Ultra (430px+) */
+@media (min-width: 429px) and (max-width: 600px) {
   .header-content {
-    padding: 1.5rem 2rem;
-    gap: 1rem;
+    padding: 1.4rem 1rem;
+    gap: 0.8rem;
   }
   
   .site-title {
@@ -544,94 +538,207 @@ input[type="checkbox"] {
   }
   
   #search-form {
-    height: 52px;
-    max-width: 500px;
-    margin: 0 auto;
+    height: 56px;
+    min-width: 340px;
   }
   
   #search-input, #search-form button {
-    height: 52px;
-    font-size: 1.1rem;
+    height: 56px;
+    font-size: 1.2rem;
   }
   
   main {
-    margin: 1.5rem auto;
-    padding: 1.5rem;
-    border-radius: 20px;
+    margin: 1.4rem;
+    padding: 1.6rem;
+    border-radius: 18px;
   }
   
   h2 {
-    font-size: 1.4rem;
-    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    margin-top: 1.6rem;
   }
   
   .joke-box {
-    padding: 1.5rem;
+    padding: 1.6rem;
     font-size: 1.2rem;
-    border-radius: 18px;
+    margin: 1.6rem 0;
   }
   
   button,
   #random-joke-btn,
   #show-more-btn {
-    padding: 0.9rem 2rem;
+    padding: 1.1rem 2.1rem;
     font-size: 1.2rem;
-    border-radius: 28px;
+    border-radius: 26px;
+    margin-top: 1.6rem;
   }
   
   #favorites-sidebar {
-    width: 85vw;
-    max-width: 400px;
+    width: 92vw;
   }
   
   .sidebar-header {
-    padding: 1.5rem;
+    padding: 1.6rem;
     font-size: 1.8rem;
   }
   
   #favorites-sidebar-list {
-    padding: 1.5rem;
-    font-size: 1.1rem;
+    padding: 1.6rem;
+    font-size: 1.2rem;
   }
   
   .hamburger {
-    font-size: 2.5rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 2.6rem;
+    padding: 0.5rem 0.9rem;
+  }
+  
+  label {
+    font-size: 1.2rem;
+    margin-left: 0.8rem;
+  }
+  
+  input[type="checkbox"] {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+
+/* Large phones and small tablets (600px-900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .header-content {
+    padding: 1.8rem 2.5rem;
+    gap: 1.2rem;
+  }
+  
+  .site-title {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  
+  #search-form {
+    height: 60px;
+    max-width: 550px;
+    margin: 0 auto;
+    min-width: 400px;
+  }
+  
+  #search-input, #search-form button {
+    height: 60px;
+    font-size: 1.3rem;
+  }
+  
+  main {
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 22px;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
+  
+  .joke-box {
+    padding: 1.8rem;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    margin: 1.8rem 0;
+  }
+  
+  button,
+  #random-joke-btn,
+  #show-more-btn {
+    padding: 1.2rem 2.3rem;
+    font-size: 1.3rem;
+    border-radius: 30px;
+    margin-top: 1.8rem;
+  }
+  
+  #favorites-sidebar {
+    width: 85vw;
+    max-width: 450px;
+  }
+  
+  .sidebar-header {
+    padding: 1.8rem;
+    font-size: 2rem;
+  }
+  
+  #favorites-sidebar-list {
+    padding: 1.8rem;
+    font-size: 1.3rem;
+  }
+  
+  .hamburger {
+    font-size: 2.8rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  label {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+  }
+  
+  input[type="checkbox"] {
+    width: 1.6em;
+    height: 1.6em;
   }
 }
 
 /* Landscape orientation adjustments for phones */
 @media (max-height: 500px) and (orientation: landscape) {
   .header-content {
-    padding: 0.5rem 1rem;
-    gap: 0.3rem;
+    padding: 0.6rem 1.2rem;
+    gap: 0.4rem;
   }
   
   .site-title {
-    font-size: 1.2rem;
-    margin: 0.2rem 0;
+    font-size: 1.4rem;
+    margin: 0.3rem 0;
   }
   
   main {
-    margin: 0.3rem auto;
-    padding: 0.8rem;
+    margin: 0.5rem auto;
+    padding: 1rem;
   }
   
   .joke-box {
-    padding: 0.8rem;
-    font-size: 0.9rem;
+    padding: 1rem;
+    font-size: 1rem;
+    margin: 0.8rem 0;
   }
   
   button,
   #random-joke-btn,
   #show-more-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.7rem 1.3rem;
+    font-size: 1rem;
+    margin-top: 0.8rem;
   }
   
   #favorites-sidebar {
     width: 80vw;
-    max-width: 350px;
+    max-width: 400px;
+  }
+  
+  .sidebar-header {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  #favorites-sidebar-list {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  label {
+    font-size: 1rem;
+    margin-left: 0.6rem;
+  }
+  
+  input[type="checkbox"] {
+    width: 1.3em;
+    height: 1.3em;
   }
 }
 
