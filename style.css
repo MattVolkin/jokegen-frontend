@@ -289,56 +289,249 @@ input[type="checkbox"] {
   transform: translateY(-2px) scale(1.01);
 }
 
-/* --- RESPONSIVE DESIGN --- */
-@media (max-width: 900px) {
+/* --- COMPREHENSIVE MOBILE RESPONSIVE DESIGN --- */
+
+/* iPhone SE (375px) and small Android phones */
+@media (max-width: 375px) {
   .header-content {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.7rem;
-    padding: 1rem 1.2rem;
-    width: 100%;
-    max-width: none;
+    padding: 0.5rem 0.3rem;
+    gap: 0.3rem;
   }
   
   .site-title {
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-    text-align: center;
+    font-size: 1.1rem;
+    margin: 0.3rem 0;
   }
   
   #search-form {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
+    height: 36px;
+  }
+  
+  #search-input, #search-form button {
+    height: 36px;
+    font-size: 0.9rem;
+  }
+  
+  main {
+    margin: 0.3rem;
+    padding: 0.6rem;
+    border-radius: 10px;
+  }
+  
+  .joke-box {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  button,
+  #random-joke-btn,
+  #show-more-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 18px;
+  }
+  
+  #favorites-sidebar {
+    width: 100vw;
+  }
+  
+  .sidebar-header {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+  }
+  
+  #favorites-sidebar-list {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .hamburger {
+    font-size: 1.8rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+/* iPhone 12/13/14 (390px) and similar Android */
+@media (min-width: 376px) and (max-width: 414px) {
+  .header-content {
+    padding: 0.7rem 0.5rem;
+    gap: 0.4rem;
+  }
+  
+  .site-title {
+    font-size: 1.3rem;
+    margin: 0.4rem 0;
+  }
+  
+  #search-form {
+    height: 40px;
+  }
+  
+  #search-input, #search-form button {
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  main {
+    margin: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 12px;
+  }
+  
+  .joke-box {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  button,
+  #random-joke-btn,
+  #show-more-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 20px;
+  }
+  
+  #favorites-sidebar {
+    width: 98vw;
+  }
+  
+  .sidebar-header {
+    padding: 1rem;
+    font-size: 1.4rem;
+  }
+  
+  #favorites-sidebar-list {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .hamburger {
+    font-size: 2rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* iPhone 12/13/14 Pro Max, iPhone 15 Plus (428px) and large Android */
+@media (min-width: 415px) and (max-width: 428px) {
+  .header-content {
+    padding: 0.8rem 0.6rem;
+    gap: 0.5rem;
+  }
+  
+  .site-title {
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+  }
+  
+  #search-form {
     height: 44px;
   }
   
   #search-input, #search-form button {
     height: 44px;
-    font-size: 1rem;
+    font-size: 1.05rem;
+  }
+  
+  main {
+    margin: 0.6rem;
+    padding: 1rem;
+    border-radius: 14px;
+  }
+  
+  .joke-box {
+    padding: 1.1rem;
+    font-size: 1.05rem;
+  }
+  
+  button,
+  #random-joke-btn,
+  #show-more-btn {
+    padding: 0.7rem 1.4rem;
+    font-size: 1.05rem;
+    border-radius: 22px;
   }
   
   #favorites-sidebar {
-    width: 100vw;
-    left: -100vw;
-    font-size: 1rem;
-    border-radius: 0;
-    border-right: none;
-    border-bottom: 4px solid var(--gold);
-  }
-  
-  #favorites-sidebar.open {
-    left: 0;
+    width: 96vw;
   }
   
   .sidebar-header {
-    border-radius: 0;
+    padding: 1.1rem;
+    font-size: 1.5rem;
+  }
+  
+  #favorites-sidebar-list {
+    padding: 1.1rem;
+    font-size: 1.05rem;
+  }
+  
+  .hamburger {
+    font-size: 2.2rem;
+    padding: 0.3rem 0.7rem;
   }
 }
 
-/* --- LARGE PHONE OPTIMIZATION --- */
+/* iPhone 15 Pro Max, Samsung Galaxy Ultra (430px+) */
+@media (min-width: 429px) and (max-width: 600px) {
+  .header-content {
+    padding: 1rem 0.8rem;
+    gap: 0.6rem;
+  }
+  
+  .site-title {
+    font-size: 1.6rem;
+    margin: 0.6rem 0;
+  }
+  
+  #search-form {
+    height: 48px;
+  }
+  
+  #search-input, #search-form button {
+    height: 48px;
+    font-size: 1.1rem;
+  }
+  
+  main {
+    margin: 0.8rem;
+    padding: 1.2rem;
+    border-radius: 16px;
+  }
+  
+  .joke-box {
+    padding: 1.2rem;
+    font-size: 1.1rem;
+  }
+  
+  button,
+  #random-joke-btn,
+  #show-more-btn {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.1rem;
+    border-radius: 24px;
+  }
+  
+  #favorites-sidebar {
+    width: 92vw;
+  }
+  
+  .sidebar-header {
+    padding: 1.2rem;
+    font-size: 1.6rem;
+  }
+  
+  #favorites-sidebar-list {
+    padding: 1.2rem;
+    font-size: 1.1rem;
+  }
+  
+  .hamburger {
+    font-size: 2.4rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Large phones and small tablets (600px-900px) */
 @media (min-width: 600px) and (max-width: 900px) {
   .header-content {
     padding: 1.5rem 2rem;
@@ -407,66 +600,74 @@ input[type="checkbox"] {
   }
 }
 
-@media (max-width: 600px) {
+/* Landscape orientation adjustments for phones */
+@media (max-height: 500px) and (orientation: landscape) {
   .header-content {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
-    padding: 0.7rem 0.5rem;
-    width: 100%;
-    max-width: none;
+    padding: 0.5rem 1rem;
+    gap: 0.3rem;
   }
   
   .site-title {
     font-size: 1.2rem;
-    margin: 0.5rem 0;
-    text-align: center;
-    letter-spacing: 0.5px;
-  }
-  
-  #search-form {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    height: 40px;
-  }
-  
-  #search-input, #search-form button {
-    height: 40px;
-    font-size: 1rem;
+    margin: 0.2rem 0;
   }
   
   main {
-    margin: 0.5rem;
+    margin: 0.3rem auto;
     padding: 0.8rem;
-    border-radius: 12px;
   }
   
   .joke-box {
-    padding: 1rem;
-    font-size: 1rem;
+    padding: 0.8rem;
+    font-size: 0.9rem;
   }
   
   button,
   #random-joke-btn,
   #show-more-btn {
-    padding: 0.6rem 1.2rem;
-    font-size: 1rem;
-    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
   
   #favorites-sidebar {
-    width: 98vw;
-    left: -100vw;
+    width: 80vw;
+    max-width: 350px;
+  }
+}
+
+/* High DPI displays (Retina, etc.) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .joke-box,
+  #search-results .search-result {
+    box-shadow: 0 1px 3px rgba(44,44,44,0.08);
   }
   
-  .sidebar-header {
-    padding: 1rem;
-    font-size: 1.4rem;
+  button,
+  #random-joke-btn,
+  #show-more-btn {
+    box-shadow: 0 1px 4px rgba(44,44,44,0.12);
+  }
+}
+
+/* Touch-friendly improvements for all mobile */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  #random-joke-btn,
+  #show-more-btn,
+  #search-form button,
+  .hamburger,
+  #close-sidebar {
+    min-height: 44px;
+    min-width: 44px;
   }
   
-  #favorites-sidebar-list {
-    padding: 1rem;
-    font-size: 1rem;
+  #search-input {
+    min-height: 44px;
+  }
+  
+  .favorite-item span {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
 }
