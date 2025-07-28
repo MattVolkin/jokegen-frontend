@@ -12,7 +12,8 @@ body {
   background: var(--white);
   color: var(--black);
 }
-/*--comment--*/
+
+/* --- HEADER STYLES --- */
 header {
   background: var(--black);
   color: var(--gold);
@@ -38,7 +39,6 @@ header {
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  /* Remove max-width so header background fills the page */
   max-width: none;
 }
 
@@ -53,6 +53,7 @@ header {
   border-radius: 8px;
   transition: background 0.2s;
 }
+
 .hamburger:focus, .hamburger:hover {
   background: var(--gold);
   color: var(--black);
@@ -72,6 +73,7 @@ header {
   border-bottom: none;
 }
 
+/* --- SEARCH FORM STYLES --- */
 #search-form {
   display: flex;
   align-items: center;
@@ -88,6 +90,7 @@ header {
   overflow: hidden;
   border: 2px solid var(--gold);
 }
+
 #search-input {
   padding: 0.7rem 1.2rem;
   font-size: 1.1rem;
@@ -101,10 +104,12 @@ header {
   height: 48px;
   transition: border 0.2s;
 }
+
 #search-input:focus {
   border: none;
   outline: 2px solid var(--gold);
 }
+
 #search-form button {
   background: var(--gold);
   color: var(--black);
@@ -121,11 +126,13 @@ header {
   align-items: center;
   transition: background 0.2s, color 0.2s;
 }
+
 #search-form button:hover {
   background: var(--black);
   color: var(--gold);
 }
 
+/* --- MAIN CONTENT STYLES --- */
 main {
   max-width: 800px;
   margin: 2rem auto;
@@ -161,6 +168,7 @@ h2 {
   box-shadow: 0 1px 4px rgba(44,44,44,0.05);
 }
 
+/* --- BUTTON STYLES --- */
 button,
 #random-joke-btn,
 #show-more-btn {
@@ -176,6 +184,7 @@ button,
   box-shadow: 0 2px 8px rgba(44,44,44,0.10);
   transition: background 0.2s, color 0.2s;
 }
+
 button:hover,
 #random-joke-btn:hover,
 #show-more-btn:hover {
@@ -195,14 +204,14 @@ input[type="checkbox"] {
   height: 1.2em;
 }
 
-/* Favorites Sidebar: match header color and style */
+/* --- FAVORITES SIDEBAR STYLES --- */
 #favorites-sidebar {
   position: fixed;
   top: 0;
   left: -340px;
   width: 340px;
   height: 100%;
-  background: var(--black);
+  background: var(--white);
   box-shadow: 2px 0 16px rgba(44,44,44,0.18);
   z-index: 1000;
   transition: left 0.3s;
@@ -213,16 +222,40 @@ input[type="checkbox"] {
   border-bottom-right-radius: 18px;
   border-right: 2px solid var(--gold);
 }
+
 #favorites-sidebar.open {
   left: 0;
 }
-#favorites-sidebar, .sidebar-header, #favorites-sidebar-list {
+
+.sidebar-header {
+  background: var(--black);
+  color: var(--gold);
   font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
   font-size: 2.2rem;
   font-weight: 800;
-  color: var(--gold);
-  background: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  border-top-right-radius: 18px;
 }
+
+#close-sidebar {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--gold);
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.2rem 0.7rem;
+  border-radius: 8px;
+}
+
+#close-sidebar:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
 #favorites-sidebar-list {
   background: var(--white);
   color: var(--black);
@@ -234,42 +267,29 @@ input[type="checkbox"] {
   padding: 1.2rem;
   border-bottom-right-radius: 18px;
 }
-.sidebar-header {
-  background: var(--black);
-  color: var(--gold);
-  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-  font-size: 2.2rem;
-  font-weight: 800;
-}
-#close-sidebar {
-  color: var(--gold);
-}
-#close-sidebar:hover {
-  background: var(--gold);
-  color: var(--black);
-}
-#favorites-sidebar-list {
-  flex: 1;
-  overflow-y: auto;
-  padding: 1.2rem;
-}
+
 .favorite-item .favorited {
   color: var(--gold) !important;
   text-shadow: 0 1px 4px rgba(44,44,44,0.10);
 }
+
 .favorite-item span {
   color: var(--black);
 }
+
+/* --- HOVER EFFECTS --- */
 #search-results .search-result,
 .joke-box {
   transition: box-shadow 0.2s, transform 0.2s;
 }
+
 #search-results .search-result:hover,
 .joke-box:hover {
   box-shadow: 0 4px 16px rgba(44,44,44,0.15);
   transform: translateY(-2px) scale(1.01);
 }
 
+/* --- RESPONSIVE DESIGN --- */
 @media (max-width: 900px) {
   .header-content {
     flex-direction: column;
@@ -279,11 +299,13 @@ input[type="checkbox"] {
     width: 100%;
     max-width: none;
   }
+  
   .site-title {
     font-size: 1.5rem;
     margin: 0.5rem 0;
     text-align: center;
   }
+  
   #search-form {
     width: 100%;
     min-width: 0;
@@ -292,10 +314,12 @@ input[type="checkbox"] {
     flex-wrap: wrap;
     height: 44px;
   }
+  
   #search-input, #search-form button {
     height: 44px;
     font-size: 1rem;
   }
+  
   #favorites-sidebar {
     width: 100vw;
     left: -100vw;
@@ -304,13 +328,16 @@ input[type="checkbox"] {
     border-right: none;
     border-bottom: 4px solid var(--gold);
   }
+  
   #favorites-sidebar.open {
     left: 0;
   }
+  
   .sidebar-header {
     border-radius: 0;
   }
 }
+
 @media (max-width: 600px) {
   .header-content {
     flex-direction: column;
@@ -320,18 +347,21 @@ input[type="checkbox"] {
     width: 100%;
     max-width: none;
   }
+  
   .site-title {
     font-size: 1.2rem;
     margin: 0.5rem 0;
     text-align: center;
     letter-spacing: 0.5px;
   }
+  
   #search-form {
     width: 100%;
     min-width: 0;
     max-width: 100%;
     height: 40px;
   }
+  
   #search-input, #search-form button {
     height: 40px;
     font-size: 1rem;
