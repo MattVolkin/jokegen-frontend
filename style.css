@@ -337,10 +337,10 @@ input[type="checkbox"] {
 /* --- MOBILE HEADER STACKING FIXES --- */
 @media (max-width: 900px) {
   .header-content {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
+    justify-content: flex-start;
+    gap: 0.7rem;
     padding: 0.6rem 1rem;
     width: 100%;
     max-width: none;
@@ -348,28 +348,30 @@ input[type="checkbox"] {
 
   .site-title {
     font-size: 1.5rem;
-    margin: 0.4rem 0;
-    text-align: center;
-    order: 2;
+    margin: 0.4rem 0 0.4rem 0.2rem;
+    text-align: left;
     line-height: 1.1;
+    order: unset;
+    flex: 1;
+    white-space: nowrap;
   }
 
   .hamburger {
-    order: 1;
-    align-self: flex-start;
     margin: 0;
     font-size: 2.2rem;
     padding: 0.3rem 0.6rem;
+    order: unset;
+    align-self: center;
   }
 
   #search-form {
-    order: 3;
     width: 100%;
     max-width: 280px;
     justify-content: center;
     flex-wrap: wrap;
     height: 48px;
     margin-top: 0.4rem;
+    order: 2;
   }
 
   #search-input, #search-form button {
