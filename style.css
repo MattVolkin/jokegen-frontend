@@ -84,8 +84,8 @@ header {
   padding: 0;
   box-shadow: none;
   height: 48px;
-  min-width: 200px;
-  max-width: 280px;
+  min-width: 180px;
+  max-width: 240px;
   width: 100%;
   overflow: hidden;
   border: 2px solid var(--gold);
@@ -357,7 +357,7 @@ input[type="checkbox"] {
   #search-form {
     order: 3;
     width: 100%;
-    max-width: 280px;
+    max-width: 220px;
     justify-content: center;
     flex-wrap: wrap;
     height: 48px;
@@ -392,9 +392,9 @@ input[type="checkbox"] {
   
   #search-form {
     height: 44px;
-    min-width: 240px;
+    min-width: 200px;
     width: 100%;
-    max-width: 260px;
+    max-width: 220px;
   }
   
   #search-input, #search-form button {
@@ -480,9 +480,9 @@ input[type="checkbox"] {
   
   #search-form {
     height: 50px;
-    min-width: 260px;
+    min-width: 220px;
     width: 100%;
-    max-width: 300px;
+    max-width: 240px;
   }
   
   #search-input, #search-form button {
@@ -568,9 +568,9 @@ input[type="checkbox"] {
   
   #search-form {
     height: 54px;
-    min-width: 280px;
+    min-width: 240px;
     width: 100%;
-    max-width: 320px;
+    max-width: 260px;
   }
   
   #search-input, #search-form button {
@@ -656,9 +656,9 @@ input[type="checkbox"] {
   
   #search-form {
     height: 58px;
-    min-width: 300px;
+    min-width: 260px;
     width: 100%;
-    max-width: 340px;
+    max-width: 280px;
   }
   
   #search-input, #search-form button {
