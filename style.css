@@ -297,140 +297,74 @@ input[type="checkbox"] {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
-    padding: 1rem 1.2rem;
+    gap: 1rem;
+    padding: 1.2rem 1rem;
     width: 100%;
     max-width: none;
   }
   
   .site-title {
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
+    font-size: 1.6rem;
+    margin: 0.8rem 0;
     text-align: center;
     order: 2;
+    line-height: 1.2;
   }
   
   .hamburger {
     order: 1;
     align-self: flex-start;
     margin-right: 0;
+    font-size: 2.2rem;
+    padding: 0.4rem 0.8rem;
   }
   
   #search-form {
     order: 3;
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     justify-content: center;
     flex-wrap: wrap;
-    height: 44px;
+    height: 48px;
+    margin-top: 0.5rem;
   }
   
   #search-input, #search-form button {
-    height: 44px;
-    font-size: 1rem;
+    height: 48px;
+    font-size: 1.1rem;
+  }
+  
+  #search-input {
+    padding: 0.8rem 1.2rem;
+  }
+  
+  #search-form button {
+    padding: 0 1.5rem;
   }
 }
 
 /* iPhone SE (375px) and small Android phones */
 @media (max-width: 375px) {
   .header-content {
-    padding: 0.8rem 0.5rem;
-    gap: 0.5rem;
+    padding: 1rem 0.8rem;
+    gap: 0.8rem;
   }
   
   .site-title {
-    font-size: 1.3rem;
-    margin: 0.5rem 0;
+    font-size: 1.4rem;
+    margin: 0.6rem 0;
   }
   
   #search-form {
     height: 44px;
     min-width: 280px;
     width: 100%;
+    max-width: 320px;
   }
   
   #search-input, #search-form button {
     height: 44px;
     font-size: 1rem;
-  }
-  
-  main {
-    margin: 0.8rem;
-    padding: 1rem;
-    border-radius: 12px;
-  }
-  
-  h2 {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-  }
-  
-  .joke-box {
-    padding: 1.2rem;
-    font-size: 1rem;
-    margin: 1rem 0;
-  }
-  
-  button,
-  #random-joke-btn,
-  #show-more-btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 20px;
-    margin-top: 1rem;
-  }
-  
-  #favorites-sidebar {
-    width: 100vw;
-  }
-  
-  .sidebar-header {
-    padding: 1rem;
-    font-size: 1.4rem;
-  }
-  
-  #favorites-sidebar-list {
-    padding: 1rem;
-    font-size: 1rem;
-  }
-  
-  .hamburger {
-    font-size: 2rem;
-    padding: 0.3rem 0.6rem;
-  }
-  
-  label {
-    font-size: 1rem;
-    margin-left: 0.8rem;
-  }
-  
-  input[type="checkbox"] {
-    width: 1.3em;
-    height: 1.3em;
-  }
-}
-
-/* iPhone 12/13/14 (390px) and similar Android */
-@media (min-width: 376px) and (max-width: 414px) {
-  .header-content {
-    padding: 1rem 0.7rem;
-    gap: 0.6rem;
-  }
-  
-  .site-title {
-    font-size: 1.5rem;
-    margin: 0.6rem 0;
-  }
-  
-  #search-form {
-    height: 48px;
-    min-width: 300px;
-    width: 100%;
-  }
-  
-  #search-input, #search-form button {
-    height: 48px;
-    font-size: 1.1rem;
   }
   
   main {
@@ -442,30 +376,33 @@ input[type="checkbox"] {
   h2 {
     font-size: 1.3rem;
     margin-top: 1.2rem;
+    margin-bottom: 1rem;
   }
   
   .joke-box {
     padding: 1.3rem;
     font-size: 1.1rem;
     margin: 1.2rem 0;
+    min-height: 80px;
   }
   
   button,
   #random-joke-btn,
   #show-more-btn {
-    padding: 0.9rem 1.7rem;
+    padding: 0.9rem 1.6rem;
     font-size: 1.1rem;
     border-radius: 22px;
     margin-top: 1.2rem;
+    min-height: 48px;
   }
   
   #favorites-sidebar {
-    width: 98vw;
+    width: 100vw;
   }
   
   .sidebar-header {
     padding: 1.2rem;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   
   #favorites-sidebar-list {
@@ -481,6 +418,9 @@ input[type="checkbox"] {
   label {
     font-size: 1.1rem;
     margin-left: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
   
   input[type="checkbox"] {
@@ -489,26 +429,27 @@ input[type="checkbox"] {
   }
 }
 
-/* iPhone 12/13/14 Pro Max, iPhone 15 Plus (428px) and large Android */
-@media (min-width: 415px) and (max-width: 428px) {
+/* iPhone 12/13/14 (390px) and similar Android */
+@media (min-width: 376px) and (max-width: 414px) {
   .header-content {
-    padding: 1.2rem 0.8rem;
-    gap: 0.7rem;
+    padding: 1.2rem 1rem;
+    gap: 1rem;
   }
   
   .site-title {
-    font-size: 1.6rem;
-    margin: 0.7rem 0;
+    font-size: 1.7rem;
+    margin: 0.8rem 0;
   }
   
   #search-form {
-    height: 52px;
-    min-width: 320px;
+    height: 50px;
+    min-width: 300px;
     width: 100%;
+    max-width: 360px;
   }
   
   #search-input, #search-form button {
-    height: 52px;
+    height: 50px;
     font-size: 1.15rem;
   }
   
@@ -521,25 +462,28 @@ input[type="checkbox"] {
   h2 {
     font-size: 1.4rem;
     margin-top: 1.4rem;
+    margin-bottom: 1.2rem;
   }
   
   .joke-box {
-    padding: 1.4rem;
+    padding: 1.5rem;
     font-size: 1.15rem;
     margin: 1.4rem 0;
+    min-height: 90px;
   }
   
   button,
   #random-joke-btn,
   #show-more-btn {
-    padding: 1rem 1.9rem;
+    padding: 1rem 1.8rem;
     font-size: 1.15rem;
     border-radius: 24px;
     margin-top: 1.4rem;
+    min-height: 50px;
   }
   
   #favorites-sidebar {
-    width: 96vw;
+    width: 98vw;
   }
   
   .sidebar-header {
@@ -560,6 +504,9 @@ input[type="checkbox"] {
   label {
     font-size: 1.15rem;
     margin-left: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
   
   input[type="checkbox"] {
@@ -568,26 +515,27 @@ input[type="checkbox"] {
   }
 }
 
-/* iPhone 15 Pro Max, Samsung Galaxy Ultra (430px+) */
-@media (min-width: 429px) and (max-width: 600px) {
+/* iPhone 12/13/14 Pro Max, iPhone 15 Plus (428px) and large Android */
+@media (min-width: 415px) and (max-width: 428px) {
   .header-content {
-    padding: 1.4rem 1rem;
-    gap: 0.8rem;
+    padding: 1.4rem 1.2rem;
+    gap: 1.2rem;
   }
   
   .site-title {
     font-size: 1.8rem;
-    margin: 0.8rem 0;
+    margin: 1rem 0;
   }
   
   #search-form {
-    height: 56px;
-    min-width: 340px;
+    height: 54px;
+    min-width: 320px;
     width: 100%;
+    max-width: 380px;
   }
   
   #search-input, #search-form button {
-    height: 56px;
+    height: 54px;
     font-size: 1.2rem;
   }
   
@@ -600,25 +548,28 @@ input[type="checkbox"] {
   h2 {
     font-size: 1.5rem;
     margin-top: 1.6rem;
+    margin-bottom: 1.4rem;
   }
   
   .joke-box {
     padding: 1.6rem;
     font-size: 1.2rem;
     margin: 1.6rem 0;
+    min-height: 100px;
   }
   
   button,
   #random-joke-btn,
   #show-more-btn {
-    padding: 1.1rem 2.1rem;
+    padding: 1.1rem 2rem;
     font-size: 1.2rem;
     border-radius: 26px;
     margin-top: 1.6rem;
+    min-height: 54px;
   }
   
   #favorites-sidebar {
-    width: 92vw;
+    width: 96vw;
   }
   
   .sidebar-header {
@@ -639,11 +590,100 @@ input[type="checkbox"] {
   label {
     font-size: 1.2rem;
     margin-left: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
   
   input[type="checkbox"] {
     width: 1.5em;
     height: 1.5em;
+  }
+}
+
+/* iPhone 15 Pro Max, Samsung Galaxy Ultra (430px+) */
+@media (min-width: 429px) and (max-width: 600px) {
+  .header-content {
+    padding: 1.6rem 1.4rem;
+    gap: 1.4rem;
+  }
+  
+  .site-title {
+    font-size: 2rem;
+    margin: 1.2rem 0;
+  }
+  
+  #search-form {
+    height: 58px;
+    min-width: 340px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  #search-input, #search-form button {
+    height: 58px;
+    font-size: 1.25rem;
+  }
+  
+  main {
+    margin: 1.6rem;
+    padding: 1.8rem;
+    border-radius: 20px;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+    margin-top: 1.8rem;
+    margin-bottom: 1.6rem;
+  }
+  
+  .joke-box {
+    padding: 1.8rem;
+    font-size: 1.25rem;
+    margin: 1.8rem 0;
+    min-height: 110px;
+  }
+  
+  button,
+  #random-joke-btn,
+  #show-more-btn {
+    padding: 1.2rem 2.2rem;
+    font-size: 1.25rem;
+    border-radius: 28px;
+    margin-top: 1.8rem;
+    min-height: 58px;
+  }
+  
+  #favorites-sidebar {
+    width: 92vw;
+  }
+  
+  .sidebar-header {
+    padding: 1.8rem;
+    font-size: 2rem;
+  }
+  
+  #favorites-sidebar-list {
+    padding: 1.8rem;
+    font-size: 1.25rem;
+  }
+  
+  .hamburger {
+    font-size: 2.8rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  label {
+    font-size: 1.25rem;
+    margin-left: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  input[type="checkbox"] {
+    width: 1.6em;
+    height: 1.6em;
   }
 }
 
