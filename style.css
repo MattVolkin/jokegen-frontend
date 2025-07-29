@@ -196,12 +196,19 @@ label {
   font-size: 1rem;
   color: var(--black);
   margin-left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+  flex-wrap: nowrap;
 }
 
 input[type="checkbox"] {
   accent-color: var(--gold);
   width: 1.2em;
   height: 1.2em;
+  margin: 0;
+  flex-shrink: 0;
 }
 
 /* --- FAVORITES SIDEBAR STYLES --- */
