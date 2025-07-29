@@ -172,6 +172,11 @@ h2 {
 }
 
 /* --- BUTTON STYLES --- */
+/* Reduce vertical space between label and #random-joke-btn */
+label + #random-joke-btn {
+  margin-top: 0.4rem !important;
+}
+button,
 button,
 #random-joke-btn,
 #show-more-btn {
@@ -179,7 +184,7 @@ button,
   color: var(--black);
   border: none;
   padding: 0.7rem 1.5rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   cursor: pointer;
   font-size: 1.1rem;
   border-radius: 24px;
@@ -335,28 +340,28 @@ input[type="checkbox"] {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    padding: 1.2rem 1rem;
+    gap: 0.6rem;
+    padding: 0.6rem 1rem;
     width: 100%;
     max-width: none;
   }
-  
+
   .site-title {
-    font-size: 1.6rem;
-    margin: 0.8rem 0;
+    font-size: 1.5rem;
+    margin: 0.4rem 0;
     text-align: center;
     order: 2;
-    line-height: 1.2;
+    line-height: 1.1;
   }
-  
+
   .hamburger {
     order: 1;
     align-self: flex-start;
-    margin-right: 0;
+    margin: 0;
     font-size: 2.2rem;
-    padding: 0.4rem 0.8rem;
+    padding: 0.3rem 0.6rem;
   }
-  
+
   #search-form {
     order: 3;
     width: 100%;
@@ -364,18 +369,18 @@ input[type="checkbox"] {
     justify-content: center;
     flex-wrap: wrap;
     height: 48px;
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
   }
-  
+
   #search-input, #search-form button {
     height: 48px;
     font-size: 1.1rem;
   }
-  
+
   #search-input {
     padding: 0.8rem 1.2rem;
   }
-  
+
   #search-form button {
     padding: 0 1.5rem;
   }
@@ -629,21 +634,8 @@ input[type="checkbox"] {
     padding: 0.5rem 0.9rem;
   }
   
-  label {
-    font-size: 1.15rem;
-    margin-left: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    white-space: nowrap;
-  }
-  
-  input[type="checkbox"] {
-    width: 1.4em;
-    height: 1.4em;
-    margin: 0;
-  }
-}
+/* Removed malformed label and input[type='checkbox'] block */
+
 
 /* iPhone 15 Pro Max, Samsung Galaxy Ultra (430px+) */
 @media (min-width: 429px) and (max-width: 600px) {
