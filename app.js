@@ -1,6 +1,6 @@
 // app.js - JokeGen Website Skeleton
 
-const API_BASE_URL = 'https://jokegen-backend.onrender.com';
+const API_BASE_URL = 'http://127.0.0.1:5000';
 
 // Cookie utility functions and helpers
 function getFavoritesFromCookies() {
@@ -28,24 +28,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const favoritesSidebar = document.getElementById('favorites-sidebar');
     const closeSidebar = document.getElementById('close-sidebar');
     const favoritesSidebarList = document.getElementById('favorites-sidebar-list');
-    const clearSearchBtn = document.getElementById('clear-search-btn');
 
     let searchResultsData = [];
     let visibleCount = 0;
     const RESULTS_PER_BATCH = 5;
-
-    // Clear search results and return to random joke view
-    function clearSearch() {
-        searchSection.style.display = 'none';
-        searchResults.innerHTML = '';
-        searchInput.value = '';
-        searchResultsData = [];
-        visibleCount = 0;
-        showMoreBtn.style.display = 'none';
-    }
-
-    // Add event listener for clear search button
-    clearSearchBtn.addEventListener('click', clearSearch);
 
     // Toggle favorite status and update sidebar
     function toggleFavorite(joke) {
@@ -124,23 +110,10 @@ window.addEventListener('DOMContentLoaded', () => {
             mediaContainer.style.alignItems = 'center';
             mediaContainer.style.justifyContent = 'space-between';
 
-            // Ensure audio_file_path is a full URL if needed
-            let audioSrc = joke.audio_file_path;
-            if (audioSrc.startsWith('/')) {
-                audioSrc = API_BASE_URL + audioSrc;
-            }
-
             const audio = document.createElement('audio');
-            audio.src = audioSrc;
+            audio.src = joke.audio_file_path;
             audio.controls = true;
             audio.style.flex = '1';
-
-            // Autoplay logic
-            setTimeout(() => {
-                if (autoplayCheckbox.checked) {
-                    audio.play().catch(() => {});
-                }
-            }, 100);
 
             const heart = document.createElement('span');
             heart.textContent = '♥';
@@ -185,14 +158,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 mediaContainer.style.alignItems = 'center';
                 mediaContainer.style.justifyContent = 'space-between';
 
-                // Ensure audio_file_path is a full URL if needed
-                let audioSrc = joke.audio_file_path;
-                if (audioSrc.startsWith('/')) {
-                    audioSrc = API_BASE_URL + audioSrc;
-                }
-
                 const audio = document.createElement('audio');
-                audio.src = audioSrc;
+                audio.src = joke.audio_file_path;
                 audio.controls = true;
                 audio.style.flex = '1';
 
@@ -253,7 +220,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 displayJoke(data);
             }
         } catch (err) {
-            jokeDisplay.textContent = 'Failed to fetch joke. Is the backend running or is the Render backend URL correct?';
+            jokeDisplay.textContent = 'Failed to fetch joke. Is the backend running?';
             jokeAudio.style.display = 'none';
             console.error(err);
         }
@@ -285,7 +252,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 showMoreBtn.style.display = 'none';
             }
         } catch (err) {
-            searchResults.textContent = 'Failed to fetch search results. Is the Render backend URL correct?';
+            searchResults.textContent = 'Failed to fetch search results.';
             showMoreBtn.style.display = 'none';
             console.error(err);
         }
