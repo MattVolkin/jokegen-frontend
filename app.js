@@ -111,7 +111,7 @@ window.addEventListener('DOMContentLoaded', () => {
             mediaContainer.style.justifyContent = 'space-between';
 
             const audio = document.createElement('audio');
-            audio.src = joke.audio_file_path;
+            audio.src = `${API_BASE_URL}${joke.audio_file_path}`;
             audio.controls = true;
             audio.style.flex = '1';
 
@@ -159,7 +159,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 mediaContainer.style.justifyContent = 'space-between';
 
                 const audio = document.createElement('audio');
-                audio.src = joke.audio_file_path;
+                audio.src = `${API_BASE_URL}${joke.audio_file_path}`;
                 audio.controls = true;
                 audio.style.flex = '1';
 
