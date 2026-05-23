@@ -1,66 +1,58 @@
-# JokeGen Website Skeleton
+# Dad Joke Player
 
-This is the frontend skeleton for the JokeGen project.
+Dad Joke Player is a lightweight frontend for browsing, searching, and saving jokes with audio playback support. It is built as a static site with plain HTML, CSS, and JavaScript, and it talks to a backend API for joke data.
 
-## Structure
-- `index.html`: Main HTML file
-- `style.css`: Basic styles  
-- `app.js`: Handles frontend logic and API calls
+## Features
 
-## Getting Started
-Open `index.html` in your browser to view the static site.
+- Fetch a random joke from the API with one click.
+- Search jokes by keyword and load results in batches.
+- Play audio when a joke includes an `audio_file_path`.
+- Save and remove favorites in the browser using cookies.
+- Open the favorites sidebar from the hamburger menu.
+- Responsive layout for desktop and mobile screens.
 
-## Your Tasks
+## Project Structure
 
-### 1. **API Integration** (`app.js`)
-- Set the correct `API_BASE_URL` to your backend
-- Implement `fetch()` calls to your backend endpoints
-- Handle API responses and errors
+- `index.html` - App shell and UI layout.
+- `style.css` - Visual design, responsive rules, and sidebar styles.
+- `app.js` - API calls, rendering logic, search, and favorites handling.
+- `Joke audio/` - Local audio assets included with the project.
+- `CNAME` - Custom domain configuration for GitHub Pages.
 
-### 2. **Random Joke Feature**
-- Fetch joke from `GET /random`
-- Display joke text in `#joke-display`
-- Show/hide audio player based on `audio_file_path`
+## How It Works
 
-### 3. **Search Feature**
-- Fetch results from `GET /search?term=keyword`
-- Display search results in `#search-results`
-- Handle empty results
+The frontend expects a backend that exposes joke endpoints. In `app.js`, the API base URL is configured with `API_BASE_URL`, and the app uses that value to fetch jokes and resolve audio file paths.
 
-### 4. **Audio Playback**
-- Set audio source when joke has audio
-- Show/hide audio controls
+Current behavior includes:
 
-### 5. **Error Handling**
-- Handle network errors
-- Show loading states
-- Display user-friendly error messages
+- `GET /random` to load a random joke.
+- `GET /search?term=...` to search jokes.
+- Favorites are persisted in a `favorites` cookie.
 
-### 6. **Styling** (`style.css`)
-- Customize colors, fonts, layout
-- Add animations and transitions
-- Make it responsive
+## Running Locally
 
-## API Response Format
-```json
-// Random joke response:
-{
-  "joke_text": "Why did the chicken cross the road?",
-  "audio_file_path": "/path/to/audio.mp3"
-}
+Because this is a static frontend that uses `fetch()`, it is best to serve it through a local web server instead of opening `index.html` directly.
 
-// Search response:
-{
-  "jokes": [
-    {"joke_text": "Joke 1", "audio_file_path": "/path1.mp3"},
-    {"joke_text": "Joke 2", "audio_file_path": "/path2.mp3"}
-  ]
-}
-```
+1. Open the project folder in VS Code or your editor.
+2. Start a simple static server, such as Live Server or any local HTTP server.
+3. Open the site in your browser.
+4. Make sure the backend URL in `app.js` points to a running API.
 
-## Backend Endpoints
-- `GET http://localhost:5000/random`
-- `GET http://localhost:5000/search?term=keyword`
+Example backend URLs used by the app:
 
----
-This skeleton provides the structure - you implement the functionality! 
+- `https://jokegen-backend.onrender.com/random`
+- `https://jokegen-backend.onrender.com/search?term=keyword`
+
+## Configuration
+
+If you want to point the frontend at a different backend, update `API_BASE_URL` in `app.js`.
+
+## Notes
+
+- Search results are rendered in batches of 5 and can be expanded with the Show More Results button.
+- Jokes with audio show an inline audio player.
+- Favorites are stored per browser, so clearing cookies will clear saved favorites.
+
+## License
+
+No license file is included yet. Add one if you plan to publish or share the project publicly.
