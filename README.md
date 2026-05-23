@@ -2,6 +2,10 @@
 
 Dad Joke Player is a lightweight frontend for browsing, searching, and saving jokes with audio playback support. It is built as a static site with plain HTML, CSS, and JavaScript, and it talks to a backend API for joke data.
 
+## Project URL
+
+[https://www.nachoaveragedadjoke.com/](https://www.nachoaveragedadjoke.com/)
+
 ## Features
 
 - Fetch a random joke from the API with one click.
@@ -53,6 +57,3 @@ If you want to point the frontend at a different backend, update `API_BASE_URL` 
 - Jokes with audio show an inline audio player.
 - Favorites are stored per browser, so clearing cookies will clear saved favorites.
 
-## License
-
-No license file is included yet. Add one if you plan to publish or share the project publicly.
